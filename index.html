@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website-1</title>
+    <!-- Imported Roboto font from Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Linked external CSS file for header styles -->
+    <link rel="stylesheet" href="./assets/css/header.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Desktop View -->
+        <div class="desktopView row">
+            <!-- Navigation Section -->
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Band</a></li>
+                    <li><a href="#">Tour</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <!-- Dropdown Menu -->
+                    <li class="dropdown">
+                        <a href="#" class="textIcon"> More
+                            <!-- White Dropdown Icon -->
+                            <svg class="whiteDrownIcon" width="20px" height="20px" fill="#ffff" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path d="M7 10l5 5 5-5" />
+                                </g>
+                            </svg>
+                            <!-- Black Dropdown Icon -->
+                            <svg class="blackDrownIcon" width="20px" height="20px" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path d="M7 10l5 5 5-5" />
+                                </g>
+                            </svg>
+                        </a>
+                        <!-- Dropdown Content -->
+                        <div class="dropdown-content">
+                            <a href="#">Merchandise</a>
+                            <a href="#">Extras</a>
+                            <a href="#">Media</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Search Bar Section -->
+            <div class="searchBar">
+                <span>
+                    <!-- Search Icon -->
+                    <svg width="20px" height="20px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #0000;
+                                    stroke: #ffff;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 1.91px;
+                                }
+                            </style>
+                        </defs>
+                        <circle class="cls-1" cx="9.14" cy="9.14" r="7.64" />
+                        <line class="cls-1" x1="22.5" y1="22.5" x2="14.39" y2="14.39" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <!-- Mobile View -->
+        <div class="mobileView">
+            <div class="row">
+                <!-- Mobile Navigation Section -->
+                <div class="nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <!-- Hidden Element for Desktop View -->
+                        <div id="myElement" class="hide">
+                            <li><a href="#">Band</a></li>
+                            <li><a href="#">Tour</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">More</a></li>
+                        </div>
+                    </ul>
+                </div>
+                <!-- Mobile Search Bar Section -->
+                <div class="searchBar" onclick="toggleVisibility()">
+                    <span>
+                        <!-- Hamburger Icon -->
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="#ffffff"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 18L20 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+                            <path d="M4 12L20 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+                            <path d="M4 6L20 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- JavaScript for toggling visibility -->
+    <script>
+        function toggleVisibility() {
+            var element = document.getElementById("myElement");
+            element.classList.toggle("hide");
+        }
+    </script>
+</body>
+
+</html>
